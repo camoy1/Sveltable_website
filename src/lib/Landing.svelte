@@ -22,7 +22,7 @@
 	.landing-text {
     padding-top: 1rem;
 		font-family: 'IBM Plex Sans', sans-serif;
-		color: white;
+		color: #e6e6e6;
 		font-size: 24px;
 		font-weight: lighter;
 	}
