@@ -2,9 +2,9 @@
 	import Img from '../assets/svelte_logo_resized.png';
 </script>
 
-<div class="main-container">
+<div class="landing-container">
 	<img src={Img} alt="the svuture of data tables" />
-	<div class="main-text">the <i>sv</i>uture of datatables is here</div>
+	<div class="landing-text">the <b><i>sv</i></b>uture of datatables is here</div>
 </div>
 
 <style>
@@ -12,17 +12,20 @@
 		width: 60%;
 	}
 
-	.main-container {
+	.landing-container {
 		display: flex;
     flex-direction: column;
 		text-align: center;
 		align-items: center;
 	}
 
-	.main-text {
-    padding-top: 1em;
+	.landing-text {
+    padding-top: 1rem;
 		font-family: 'IBM Plex Sans', sans-serif;
 		color: white;
-		font-size: 1.5rem;
+		font-size: 24px;
+		font-weight: lighter;
 	}
+
+	
 </style>

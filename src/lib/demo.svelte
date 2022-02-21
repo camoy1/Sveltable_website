@@ -1,7 +1,14 @@
 <script>
+	/**
+	 * import namor for random data generation
+	 */
 	import namor from 'namor';
 	import SvelTable from 'sveltables';
 
+	/**
+	 * newPerson function
+	 * @param num = number of rows to create
+	 */
 	function newPerson(num) {
 		const sexAssigner = Math.random();
 		return {
@@ -29,7 +36,6 @@
 </div>
 
 <div class="DemoContainer">
-	
 	<SvelTable dataSet={data} />
 </div>
 
@@ -41,10 +47,10 @@
 		align-items: center;
 	}
 
-	.header{
-    color: #fff;
-    font-family: 'IBM Plex Sans', sans-serif;
-    display: flex;
-    justify-content: center;
-  }
+	.header {
+		color: #fff;
+		font-family: 'IBM Plex Sans', sans-serif;
+		display: flex;
+		justify-content: center;
+	}
 </style>
