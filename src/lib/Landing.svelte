@@ -4,7 +4,7 @@
 
 <div class="landing-container">
 	<img src={Img} alt="the svuture of data tables" />
-	<div class="landing-text">the <b><i>sv</i></b>uture of datatables is here</div>
+	<div class="landing-text">the <b><i>sv</i></b>uture of data-tables is here</div>
 </div>
 
 <style>
@@ -17,6 +17,7 @@
     flex-direction: column;
 		text-align: center;
 		align-items: center;
+		
 	}
 
 	.landing-text {
@@ -26,6 +27,5 @@
 		font-size: 24px;
 		font-weight: lighter;
 	}
-
 	
 </style>

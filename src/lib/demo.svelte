@@ -3,7 +3,7 @@
 	 * import namor for random data generation
 	 */
 	import namor from 'namor';
-	import SvelTable from 'sveltables';
+	import SvelTable from 'sveltable';
 
 	/**
 	 * newPerson function
@@ -31,15 +31,21 @@
 	}
 </script>
 
-<div class="header">
-	<h2>demo</h2>
-</div>
+<div class="SectionContainer">
+	<div class="HeaderTitle">
+		<h2>demo</h2>
+	</div>
 
-<div class="DemoContainer">
-	<SvelTable dataSet={data} />
+	<div class="DemoContainer">
+		<SvelTable dataSet={data} />
+	</div>
 </div>
 
 <style>
+	.SectionContainer {
+		padding: 5rem 0 5rem 0;
+	}
+
 	.DemoContainer {
 		padding-top: 2em;
 		display: flex;
@@ -47,7 +53,7 @@
 		align-items: center;
 	}
 
-	.header {
+	.HeaderTitle {
 		color: #fff;
 		font-family: 'IBM Plex Sans', sans-serif;
 		display: flex;

@@ -1,8 +1,8 @@
+
 <div class="SectionContainer">
 	<div class="HeaderTitle">
-		<h2>features</h2>
+		<h2>installation</h2>
 	</div>
-	
 	<!-- Step 1 -->
 	<div class="gif-cont ">
 		<div class="step text-left">
@@ -41,20 +41,6 @@
 		</div>
 	</div>
 </div>
-
-<!-- <div class="features">
-  <h2>features</h2>
-</div>
-
-<div class="gif-cont ">
-
-<div class="visual">
-  <img class="gif img2" src="src/assets/DEMO Column Sort.gif" alt="Demo of importing Sveltable into your app.svelte file" /> 
-</div>
-<div class="step text-right">
-  <h3>column sorting</h3>
-</div>
-</div> -->
 
 <style>
 	.SectionContainer {

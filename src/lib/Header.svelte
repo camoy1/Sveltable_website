@@ -14,10 +14,13 @@
 <svelte:window bind:scrollY={y} />
 
 <div class={`header-${theme}`}>
+	<!-- Full navigation bar -->
 	<div class="container-row">
+
 		<!-- Left header navigation -->
 		<div class={`menu-left ml-${theme}`}>
 			<div class="head-btn" on:click={() => scrollTo('.DemoContainer')}>demo</div>
+			<div class="head-btn" on:click={() => scrollTo('.InstallationContainer')}>installation</div>
 			<div class="head-btn" on:click={() => scrollTo('.FeatureContainer')}>features</div>
 			<div class="head-btn" on:click={() => scrollTo('.TeamContainer')}>team</div>
 		</div>
@@ -34,7 +37,7 @@
 					<i class="fab fa-github fa-2x" />
 				</div>
 			</a>
-			<a class="linkedin-link" href="https://www.linkedin.com" target="_blank">
+			<a class="linkedin-link" href="https://www.linkedin.com/company/sveltable-open-source-product" target="_blank">
 				<div class={`linkedin-${theme}`}>
 					<i class={`fab fa-linkedin fa-2x`} />
 				</div>
@@ -56,7 +59,7 @@
 	.container-row {
 		display: grid;
 		height: 3rem;
-		grid-template-columns: [left] 25vw [center] 50vw [right] 25vw;
+		grid-template-columns: [left] 45vw [center] 10vw [right] 45vw;
 		transition: all 0.5s;
 	}
 
@@ -74,13 +77,14 @@
 		grid-area: left;
 		display: flex;
 		align-items: center;
-		max-width: 25vw;
+		justify-content: flex-start;
+		border: 1px solid blue;
 		font-family: 'IBM Plex Sans', sans-serif;
-		border: 1px solid lightblue;
+		/* padding-left: 5rem; */
 	}
 
 	.menu-left div {
-		margin-left: 0.5rem;
+		margin-left: 2rem;
 	}
 
 	.menu-logo {
@@ -95,11 +99,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
-		border: 1px solid white;
+		border: 1px solid blue;
+		/* padding-right: 5rem; */
 	}
 
 	.menu-social a {
-		margin-right: 0.5rem;
+		margin-right: 2rem;
 	}
 
 	.git-light {
@@ -128,7 +133,4 @@
 		max-height: 2.5rem; /* sets img height to be slighter smaller than the header's height */
 	}
 
-	@media screen and (max-width: 650px) {
-	
-	}
 </style>
