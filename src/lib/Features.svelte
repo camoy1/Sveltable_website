@@ -42,27 +42,13 @@
 	</div>
 </div>
 
-<!-- <div class="features">
-  <h2>features</h2>
-</div>
-
-<div class="gif-cont ">
-
-<div class="visual">
-  <img class="gif img2" src="src/assets/DEMO Column Sort.gif" alt="Demo of importing Sveltable into your app.svelte file" /> 
-</div>
-<div class="step text-right">
-  <h3>column sorting</h3>
-</div>
-</div> -->
-
 <style>
 	.SectionContainer {
-		padding: 5rem 0 5rem 0;
+		padding: 4rem 0 4rem 0;
 	}
 
 	.HeaderTitle {
-		color: #fff;
+		color: #e6e6e6;
 		font-family: 'IBM Plex Sans', sans-serif;
 		display: flex;
 		justify-content: center;
@@ -79,7 +65,7 @@
 	}
 
 	.step {
-		color: #fff;
+		color: #e6e6e6;
 		font-family: 'IBM Plex Sans', sans-serif;
 		display: flex;
 		align-items: center;
@@ -100,6 +86,11 @@
 	}
 
 	a:visited {
-		color: #fff;
+		color: #e6e6e6;
+	}
+	@media screen and (max-width:800px){
+		.step {
+			color: blue;
+		}
 	}
 </style>

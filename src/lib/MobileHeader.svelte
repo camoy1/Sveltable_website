@@ -20,20 +20,7 @@
 
 <svelte:window bind:scrollY={y} />
 
-<!-- Required css for Hamburger component-->
-<!-- <svelte:head> -->
-	<!-- Import Hamburger base css -->
-	<!-- <link
-		rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/svelte-hamburgers@3/dist/css/base.css"
-	/> -->
 
-	<!-- Import Hamburger spin css (spin is default type) -->
-	<!-- <link
-		rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/svelte-hamburgers@3/dist/css/types/spin.css"
-	/> -->
-<!-- </svelte:head> -->
 
 <!-- Dictates dark/light theme for Mobile header row-->
 <div class={`mobile-header-row-${theme}`}>
@@ -51,7 +38,7 @@
 		</div>
 	</div>
 	<!-- MobileMenu opening -->
-	<MobileMenu bind:open />
+	<MobileMenu bind:open theme={theme}/>
 </div>
 
 <style>

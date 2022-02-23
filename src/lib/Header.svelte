@@ -42,7 +42,7 @@
 					<i class={`fab fa-linkedin fa-2x`} />
 				</div>
 			</a>
-			<a class="npm-link" href="https://www.npmjs.com/package/sveltable">
+			<a class="npm-link" href="https://www.npmjs.com/package/sveltable" target="_blank">
 				<div class={`npm-${theme}`}>
 					<i class="fab fa-npm fa-2x" />
 				</div>
