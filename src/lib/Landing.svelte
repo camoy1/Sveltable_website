@@ -1,10 +1,11 @@
 <script>
-	import Img from '../assets/svelte_logo_resized.png';
+	import mainLogo from '../assets/main-logo.png';
 </script>
 
 <div class="landing-container">
-	<img src={Img} alt="the svuture of data tables" />
+	<img src={mainLogo} alt="the svuture of data tables" />
 	<div class="landing-text">the <b><i>sv</i></b>uture of data-tables is here</div>
+
 </div>
 
 <style>

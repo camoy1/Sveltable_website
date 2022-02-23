@@ -2,7 +2,7 @@
 	import Hamburger from 'svelte-hamburgers';
 	import MobileMenu from './MobileMenu.svelte';
 
-	import Img from '../assets/svelte_logo_resized.png';
+	import mainLogo from '../assets/main-logo.png';
 
 	let y = 0; // 'y' represents the user's y-axis scroll
 	$: theme = y > 0 ? 'light' : 'dark'; // 'theme' represents light or dark background of header
@@ -34,7 +34,7 @@
 		
 		<!-- SvelTable logo icon -->
 		<div class="menu-logo">
-			<img id="logo-img" src={Img} alt="svelte table logo" />
+			<img id="logo-img" src={mainLogo} alt="svelte table logo" />
 		</div>
 	</div>
 	<!-- MobileMenu opening -->

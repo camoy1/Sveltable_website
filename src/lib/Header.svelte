@@ -1,5 +1,5 @@
 <script>
-	import Img from '../assets/svelte_logo_resized.png';
+	import mainLogo from '../assets/main-logo.png';
 	let y = 0; // 'y' represents the user's y-axis scroll
 	$: theme = y > 0 ? 'light' : 'dark'; // 'theme' represents light or dark background of header
 
@@ -16,7 +16,6 @@
 <div class={`header-${theme}`}>
 	<!-- Full navigation bar -->
 	<div class="container-row">
-
 		<!-- Left header navigation -->
 		<div class={`menu-left ml-${theme}`}>
 			<div class="head-btn" on:click={() => scrollTo('.DemoContainer')}>demo</div>
@@ -27,7 +26,7 @@
 
 		<!-- Center header navigation -->
 		<div class="menu-logo">
-			<img id="logo-img" src={Img} alt="svelte table logo" />
+			<img id="logo-img" src={mainLogo} alt="svelte table logo" />
 		</div>
 
 		<!-- Right header navigation -->
@@ -37,7 +36,11 @@
 					<i class="fab fa-github fa-2x" />
 				</div>
 			</a>
-			<a class="linkedin-link" href="https://www.linkedin.com/company/sveltable-open-source-product" target="_blank">
+			<a
+				class="linkedin-link"
+				href="https://www.linkedin.com/company/sveltable-open-source-product"
+				target="_blank"
+			>
 				<div class={`linkedin-${theme}`}>
 					<i class={`fab fa-linkedin fa-2x`} />
 				</div>
@@ -78,7 +81,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		border: 1px solid blue;
 		font-family: 'IBM Plex Sans', sans-serif;
 		/* padding-left: 5rem; */
 	}
@@ -91,7 +93,6 @@
 		grid-area: center;
 		display: flex;
 		justify-content: center;
-		border: 1px solid red;
 	}
 
 	.menu-social {
@@ -99,8 +100,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
-		border: 1px solid blue;
-		/* padding-right: 5rem; */
+		margin-right: 1rem;
 	}
 
 	.menu-social a {
@@ -132,5 +132,4 @@
 	#logo-img {
 		max-height: 2.5rem; /* sets img height to be slighter smaller than the header's height */
 	}
-
 </style>

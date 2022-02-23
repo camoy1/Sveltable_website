@@ -7,7 +7,7 @@
 	 * Features.svelte is our text description of features within Sveltable.
 	 * Demo.svelte is a component containing a gif of creating a table component and a description of it.
 	 */
-	import Team from '../lib/Team.svelte'
+	import Team from '../lib/Team.svelte';
 	import Header from '../lib/Header.svelte';
 	import MobileHeader from '../lib/MobileHeader.svelte';
 	import Landing from '../lib/Landing.svelte';
@@ -33,9 +33,9 @@
 	</div>
 	<!-- Demo section -->
 	{#if clientWidth > 800}
-	<div class="DemoContainer">
-		<Demo />
-	</div>
+		<div class="DemoContainer">
+			<Demo />
+		</div>
 	{/if}
 	<!-- Installation section -->
 	<div class="InstallationContainer">
@@ -46,7 +46,7 @@
 		<Features />
 	</div>
 	<div class="TeamContainer">
-		<Team/>
+		<Team />
 	</div>
 </div>
 
@@ -86,6 +86,7 @@
 	.FeatureContainer {
 		min-height: 100vh;
 	}
+
 	.TeamContainer {
 		min-height: 100vh;
 	}

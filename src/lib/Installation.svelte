@@ -1,91 +1,135 @@
+<script>
+	import npmInstall from '../assets/npm-install.gif'
+	import importPkg from '../assets/import-sveltable-demo.gif'
+	import setupData from '../assets/data-setup-demo.gif'
+	import setupRows from '../assets/numRows-demo.gif'
+	let innerWidth;
+	$: style = innerWidth > 1100 ? 'desktop' : 'mobile';
+</script>
 
-<div class="SectionContainer">
+<svelte:window bind:innerWidth />
+
+<div class={`SectionContainer-${style}`}>
 	<div class="HeaderTitle">
-		<h2>installation</h2>
+		<h1>installation</h1>
 	</div>
-	<!-- Step 1 -->
-	<div class="gif-cont ">
-		<div class="step text-left">
+
+	<!-- Step 1: Install Container -->
+	<div class={`StepContainer-left-${style}`}>
+		<div class="Step">
 			<p>
-				<b>step 1:</b> install sveltable with
-				<a href="https://www.npmjs.com/" target="_blank"> npm </a>
+				<b>step 1:</b> install <em>sveltable</em> with
+				<a href="https://www.npmjs.com/package/sveltable" target="_blank"> npm </a>
 			</p>
 		</div>
-		<div class="visual">
-			<img class="gif" src="src/assets/DEMO NPM install.gif" alt="Demo of NPM install Terminal" />
+		<div class="GifContainer">
+			<img src={npmInstall} alt="Demo of NPM install Terminal" />
 		</div>
 	</div>
-	
-	<!-- Step 2 -->
-	<div class="gif-cont ">
-		<div class="visual">
-			<img
-				class="gif img2"
-				src="src/assets/DEMO import SvelTables.gif"
-				alt="Demo of importing Sveltable into your app.svelte file"
-			/>
+
+	<!-- Step 2: Import Container -->
+	<div class={`StepContainer-right-${style}`}>
+		<div class="GifContainer">
+			<img src={importPkg} alt="Demo of importing component" />
 		</div>
-		<div class="step text-right">
-			<p><b>step 2:</b> import sveltables to your svelte file</p>
+		<div class="Step">
+			<p>
+				<b>step 2:</b> import <em>sveltable</em> into your application
+			</p>
 		</div>
 	</div>
-	
-	<!-- Step 3 -->
-	<div class="gif-cont">
-		<div class="step text-left">
-			<p><b>step 3:</b> add your data</p>
+
+	<!-- Step 3: Data Setup Container -->
+	<div class={`StepContainer-left-${style}`}>
+		<div class="Step">
+			<p>
+				<b>step 3:</b> pass in your data
+			</p>
 		</div>
-	
-		<div class="visual">
-			<img class="gif" src="src/assets/DEMO data setup.gif" alt="Demo of NPM install Terminal" />
+		<div class="GifContainer">
+			<img src={setupData} alt="Demo of passing in data" />
 		</div>
 	</div>
+
+	<!-- Step 4: Row Setup Container -->
+	<div class={`StepContainer-right-${style}`}>
+		<div class="GifContainer">
+			<img src={setupRows} alt="Demo of setting up display row" />
+		</div>
+		<div class="Step">
+			<p>
+				<b>step 4:</b> specify how many rows to display
+			</p>
+		</div>
+	</div>
+
 </div>
 
 <style>
-	.SectionContainer {
+	p {
+		font-family: 'IBM Plex Sans', sans-serif;
+	}
+
+	.SectionContainer-desktop {
+		padding: 4rem 0 4rem 0;
+	}
+
+	.SectionContainer-mobile {
 		padding: 4rem 0 4rem 0;
 	}
 
 	.HeaderTitle {
-		color: #fff;
+		color: #e6e6e6;
 		font-family: 'IBM Plex Sans', sans-serif;
 		display: flex;
 		justify-content: center;
 	}
 
-	.gif-cont {
-		display: flex;
-		justify-content: center;
-		margin-bottom: 4rem;
-	}
-
-	.gif {
-		width: 100%;
-	}
-
-	.step {
-		color: #fff;
+	.Step {
+		margin: 0 2rem 0 2rem;
+		color: #e6e6e6;
 		font-family: 'IBM Plex Sans', sans-serif;
+		font-weight: lighter;
 		display: flex;
 		align-items: center;
+		font-size: 1.2rem;
 	}
 
-	.text-left {
-		margin-right: 2rem;
+	.StepContainer-left-desktop,
+	.StepContainer-right-desktop {
+		display: flex;
+		align-items: center;
+		margin-bottom: 50px;
 	}
 
-	.text-right {
-		margin-left: 2rem;
+	.StepContainer-left-mobile {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 
-	.visual {
-		padding: 1rem;
-		background: #d3d3d3;
-		width: 50%;
+	.StepContainer-right-mobile {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.GifContainer {
+		max-width: 80vw;
+		padding: 0.5em 0.5em 0.5em 0.5em ;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #e6e6e6;
+	}
+	.GifContainer img {
+		max-height: 100%;
+		max-width: 100%;
 	}
 
 	a:visited {
-		color: #fff;
+		color: #e6e6e6;
 	}
 </style>
