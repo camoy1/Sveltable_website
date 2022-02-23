@@ -1,6 +1,6 @@
 
 import namor from 'namor';
-let userDefinedNum = 50;
+let userDefinedNum = 1000;
 
   function newPerson(num) {
     const sexAssigner = Math.random();

@@ -1,110 +1,122 @@
-<!-- <script>
+<script>
+	import columnSort from '../assets/column-sorting-demo.gif'
+	import columnResize from '../assets/column-resizing-demo.gif'
+	import multiFilter from '../assets/multifilter-demo.gif'
+	import globalSearch from '../assets/search-bar-1-filter-demo.gif'
+	let innerWidth;
+	$: style = innerWidth > 1100 ? 'desktop' : 'mobile';
 </script>
- -->
-<div class="features">
-  <h2>installation</h2>
+
+<svelte:window bind:innerWidth />
+
+<div class={`SectionContainer-${style}`}>
+	<div class="HeaderTitle">
+		<h1>features</h1>
+	</div>
+	<!-- Global Search Container -->
+	<div class={`StepContainer-left-${style}`}>
+		<div class="Step">
+			<p>
+				<strong>search:</strong> search for values globally
+			</p>
+		</div>
+		<div class="GifContainer">
+			<img src={globalSearch} alt="Demo of global search feature" />
+		</div>
+	</div>
+
+	<!-- Sort Container -->
+	<div class={`StepContainer-right-${style}`}>
+		<div class="GifContainer">
+			<img src={columnSort} alt="Demo of importing component" />
+		</div>
+		<div class="Step">
+			<p>
+				<strong>sorting:</strong> sort any column
+			</p>
+		</div>
+	</div>
+	<!-- Multi Filter Container -->
+	<div class={`StepContainer-left-${style}`}>
+		<div class="Step">
+			<p>
+				<strong>multi-filter:</strong> filter multiple columns simultaneously
+			</p>
+		</div>
+		<div class="GifContainer">
+			<img src={multiFilter} alt="Demo of multiple filter" />
+		</div>
+	</div>
+
+	<!-- Sort Container -->
+	<div class={`StepContainer-right-${style}`}>
+		<div class="GifContainer">
+			<img src={columnResize} alt="Demo of resizing columns" />
+		</div>
+		<div class="Step">
+			<p>
+				<strong>resizing:</strong> resize any columns
+			</p>
+		</div>
+	</div>
 </div>
-
- <!-- Step 1 -->
-<div class="gif-cont ">
-
-<div class="step text-left">
-  <p> <b>step 1:</b> install sveltables with <a href="https://www.npmjs.com/" target="_blank"> npm </a> </p>
-</div>
-<div class="visual">
-  <img class="gif" src="src/assets/DEMO NPM install.gif" alt="Demo of NPM install Terminal" /> 
-</div>
-</div> 
-
- <!-- Step 2 -->
-<div class="gif-cont ">
-
-<div class="visual">
-  <img class="gif img2" src="src/assets/DEMO import SvelTables.gif" alt="Demo of importing Sveltable into your app.svelte file" /> 
-</div>
-<div class="step text-right">
-  <p><b>step 2:</b> import sveltables to your svelte file</p>
-</div>
-</div>
-
- <!-- Step 3 -->
-
- <div class="gif-cont ">
-
-  <div class="step text-left">
-  <p><b>step 3:</b> add your data</p>
- 
-</div>
-
-
-<div class="visual">
-  <img class="gif" src="src/assets/DEMO data setup.gif" alt="Demo of NPM install Terminal" /> 
-</div>
-</div>
-
-<!-- <div class="features">
-  <h2>features</h2>
-</div>
-
-<div class="gif-cont ">
-
-<div class="visual">
-  <img class="gif img2" src="src/assets/DEMO Column Sort.gif" alt="Demo of importing Sveltable into your app.svelte file" /> 
-</div>
-<div class="step text-right">
-  <h3>column sorting</h3>
-</div>
-</div> -->
-
-
-
 
 <style>
-  .features {
-    color: #fff;
-    font-family: 'IBM Plex Sans', sans-serif;
-    display: flex;
-    justify-content: center;
-  }
+	.SectionContainer-desktop ,.SectionContainer-mobile{
+		padding: 4rem 0 4rem 0;
+	}
 
-  .gif-cont{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 4rem;
-  }
+	.StepContainer-left-desktop,
+	.StepContainer-right-desktop {
+		margin: 0 2rem 0 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 50px;
+	}
 
-  .gif{
-  
-   width: 100%;
-  }
+	.StepContainer-left-mobile {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
 
- /* .img2{
-   height: 80%;
- } */
-  .step{
-    color: #fff;
-   
-    font-family: 'IBM Plex Sans', sans-serif;
-    display: flex;
-    align-items: center;
+	.StepContainer-right-mobile {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: center;
+	}
 
-  }
+	.HeaderTitle {
+		color: white;
+		font-family: 'IBM Plex Sans', sans-serif;
+		display: flex;
+		justify-content: center;
+	}
 
-  .text-left{
-    margin-right: 2rem; 
-  }
-  
-  .text-right{
-    margin-left: 2rem;
-  }
+	.Step {
+		margin: 0 1rem 0 1rem;
+		color: white;
+		font-family: 'IBM Plex Sans', sans-serif;
+		font-weight: lighter;
+		display: flex;
+		align-items: center;
+		font-size: 1.2rem;
+	}
 
-  .visual{
-   
-    padding: 1rem;
-    background: #d3d3d3;
-    width: 50%; 
-  }
-  a:visited{
-    color: #fff;
-  }
+	.GifContainer {
+		max-width: 80vw;
+		padding: 0.5em 0.5em 0.5em 0.5em ;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #9c9c9c;
+	}
+	.GifContainer img {
+		max-height: 100%;
+		max-width: 100%;
+	}
+	
 </style>
