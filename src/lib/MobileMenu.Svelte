@@ -41,13 +41,15 @@
 	.button {
 		cursor: pointer;
 	}
+	
 	div {
 		align-items: right;
 		font-size: 1rem;
 		letter-spacing: 0.15em;
 		padding: 1em;
 		padding-top: 1em;
-		color: #e6e6e6;
+		color: white;
+		font-family: 'IBM Plex Sans', sans-serif;
 	}
 
 	.mobile-icons {
@@ -58,7 +60,7 @@
 	}
 
 	.mobile-text-dark {
-		color: #e6e6e6;
+		color: white;
 	}
 
 	.mobile-text-light {
@@ -70,7 +72,7 @@
 	}
 
 	.npm-dark {
-		color: #e6e6e6; /* white when header is dark*/
+		color: white; /* white when header is dark*/
 	}
 	
 	.git-light {

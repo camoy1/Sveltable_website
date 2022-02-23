@@ -18,7 +18,7 @@
 	<div class={`StepContainer-left-${style}`}>
 		<div class="Step">
 			<p>
-				<b>step 1:</b> install <em>sveltable</em> with
+				<b>step 1:</b> install <strong><em>sveltable</em></strong> with
 				<a href="https://www.npmjs.com/package/sveltable" target="_blank"> npm </a>
 			</p>
 		</div>
@@ -79,30 +79,32 @@
 	}
 
 	.HeaderTitle {
-		color: #e6e6e6;
+		color: white;
 		font-family: 'IBM Plex Sans', sans-serif;
 		display: flex;
 		justify-content: center;
 	}
 
 	.Step {
-		margin: 0 2rem 0 2rem;
-		color: #e6e6e6;
+		margin: 0 1rem 0 1rem;
+		color: white;
 		font-family: 'IBM Plex Sans', sans-serif;
 		font-weight: lighter;
 		display: flex;
-		align-items: center;
 		font-size: 1.2rem;
 	}
 
 	.StepContainer-left-desktop,
 	.StepContainer-right-desktop {
+		margin: 0 2rem 0 2rem;
 		display: flex;
+		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 50px;
 	}
 
 	.StepContainer-left-mobile {
+		margin: 2rem 2rem 2rem 2rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -122,7 +124,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background-color: #e6e6e6;
+		background-color: white;
 	}
 	.GifContainer img {
 		max-height: 100%;
@@ -130,6 +132,6 @@
 	}
 
 	a:visited {
-		color: #e6e6e6;
+		color: white;
 	}
 </style>

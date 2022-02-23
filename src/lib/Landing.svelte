@@ -1,12 +1,20 @@
 <script>
 	import mainLogo from '../assets/main-logo.png';
+	import { fade } from 'svelte/transition';
+	import { onMount } from 'svelte'
+	let show = false;
+	onMount(()=>{
+		show=!show
+	})
 </script>
 
-<div class="landing-container">
+{#if show}
+<div class="landing-container" transition:fade="{{ delay: 500, duration: 2000 }}">
 	<img src={mainLogo} alt="the svuture of data tables" />
 	<div class="landing-text">the <b><i>sv</i></b>uture of data-tables is here</div>
-
-</div>
+	
+	</div>
+{/if}
 
 <style>
 	img {
@@ -24,7 +32,7 @@
 	.landing-text {
     padding-top: 1rem;
 		font-family: 'IBM Plex Sans', sans-serif;
-		color: #e6e6e6;
+		color: white;
 		font-size: 24px;
 		font-weight: lighter;
 	}

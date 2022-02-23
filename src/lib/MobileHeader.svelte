@@ -6,7 +6,7 @@
 
 	let y = 0; // 'y' represents the user's y-axis scroll
 	$: theme = y > 0 ? 'light' : 'dark'; // 'theme' represents light or dark background of header
-	$: burgerTheme = y > 0 ? '#002940' : '#e6e6e6';
+	$: burgerTheme = y > 0 ? '#002940' : 'white';
 	
 	let open = false; // opening Hamburger component
 
@@ -57,12 +57,12 @@
 
 	.mobile-header-row-dark {
 		background-color: #002940;
-		color: #e6e6e6;
+		color: white;
 		transition: all 0.5s;
 	}
 
 	.mobile-header-row-light {
-		background-color: #e6e6e6;
+		background-color: white;
 		color: #002940;
 		transition: all 0.5s;
 	}

@@ -11,13 +11,13 @@
 
 <div class={`SectionContainer-${style}`}>
 	<div class="HeaderTitle">
-		<h2>features</h2>
+		<h1>features</h1>
 	</div>
 	<!-- Global Search Container -->
 	<div class={`StepContainer-left-${style}`}>
 		<div class="Step">
 			<p>
-				<b>global search:</b> search for values globally
+				<strong>search:</strong> search for values globally
 			</p>
 		</div>
 		<div class="GifContainer">
@@ -32,7 +32,7 @@
 		</div>
 		<div class="Step">
 			<p>
-				<b>sorting:</b> sort any column
+				<strong>sorting:</strong> sort any column
 			</p>
 		</div>
 	</div>
@@ -40,7 +40,7 @@
 	<div class={`StepContainer-left-${style}`}>
 		<div class="Step">
 			<p>
-				<b>multi filter:</b> filter multiple columns at once
+				<strong>multi-filter:</strong> filter multiple columns simultaneously
 			</p>
 		</div>
 		<div class="GifContainer">
@@ -55,7 +55,7 @@
 		</div>
 		<div class="Step">
 			<p>
-				<b>resizing:</b> resize any columns
+				<strong>resizing:</strong> resize any columns
 			</p>
 		</div>
 	</div>
@@ -68,7 +68,9 @@
 
 	.StepContainer-left-desktop,
 	.StepContainer-right-desktop {
+		margin: 0 2rem 0 2rem;
 		display: flex;
+		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 50px;
 	}
@@ -88,16 +90,17 @@
 	}
 
 	.HeaderTitle {
-		color: #e6e6e6;
+		color: white;
 		font-family: 'IBM Plex Sans', sans-serif;
 		display: flex;
 		justify-content: center;
 	}
 
 	.Step {
-		margin: 0 2rem 0 2rem;
-		color: #e6e6e6;
+		margin: 0 1rem 0 1rem;
+		color: white;
 		font-family: 'IBM Plex Sans', sans-serif;
+		font-weight: lighter;
 		display: flex;
 		align-items: center;
 		font-size: 1.2rem;

@@ -21,7 +21,7 @@
 		};
 	}
 
-	let userDefinedNum = 50;
+	let userDefinedNum = 1000;
 
 	let data = [];
 
@@ -33,7 +33,7 @@
 
 <div class="SectionContainer">
 	<div class="HeaderTitle">
-		<h2>demo</h2>
+		<h1>demo</h1>
 	</div>
 
 	<div class="DemoContainer">
@@ -44,19 +44,21 @@
 <style>
 	.SectionContainer {
 		padding: 4rem 0 4rem 0;
+		justify-content: center;
 	}
 
 	.DemoContainer {
-		padding-top: 2em;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		justify-content: center;
 	}
 
 	.HeaderTitle {
-		color: #fff;
+		color: white;
 		font-family: 'IBM Plex Sans', sans-serif;
 		display: flex;
+		align-items: center;
 		justify-content: center;
+		font-size: 1.2rem;
 	}
 </style>

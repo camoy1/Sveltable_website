@@ -56,7 +56,7 @@
 
 <style>
 	a {
-		color: #e6e6e6;
+		color: white;
 	}
 
 	.container-row {
@@ -68,11 +68,11 @@
 
 	.header-dark {
 		background-color: #002940;
-		color: #e6e6e6;
+		color: white;
 	}
 
 	.header-light {
-		background-color: #e6e6e6;
+		background-color: white;
 		color: #002940;
 	}
 
@@ -82,7 +82,7 @@
 		align-items: center;
 		justify-content: flex-start;
 		font-family: 'IBM Plex Sans', sans-serif;
-		/* padding-left: 5rem; */
+		font-weight: lighter;
 	}
 
 	.menu-left div {
@@ -120,7 +120,7 @@
 	}
 
 	.npm-dark {
-		color: #e6e6e6; /* white when header is dark*/
+		color: white; /* white when header is dark*/
 	}
 
 	.head-btn:hover,

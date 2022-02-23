@@ -19,7 +19,6 @@
 		<!-- 
       Card for each person => Two columns (1:3 sizing) => Profile column (Photo div, Details div) and Bio column
     -->
-
 		<!-- Adam Card -->
 		<div class={`Card-${style}`}>
 			<!-- Profile Column with Photo Section and Profile Details -->
@@ -32,7 +31,7 @@
 				<div class="ProfileDetails">
 					<div class="ProfileText">
 						<h4>Adam Moore</h4>
-						<span><em>Tampa, Florida</em></span>
+						<span><em><i class="fas fa-map-pin" style="color: #cc3534; margin-right: 0.5rem;"></i>Tampa, Florida</em></span>
 					</div>
 					<!-- Personal Links for Icon -->
 					<div class="Links">
@@ -52,8 +51,8 @@
 						</a>
 					</div>
 				</div>
+				
 			</div>
-
 			<!-- Bio Column -->
 			<div class={`BioColumn-${style}`}>
 				<span
@@ -66,9 +65,8 @@
 				</span>
 			</div>
 		</div>
-
 		<!-- Brad Card -->
-		<div class={`Card-${style}`}>
+		<div class={`Card-${style}`} >
 			<!-- Profile Column with Photo Section and Profile Details -->
 			<div class={`ProfileColumn-${style}`}>
 				<!-- Photo Section -->
@@ -79,7 +77,7 @@
 				<div class="ProfileDetails">
 					<div class="ProfileText">
 						<h4>Braddon Murphy</h4>
-						<span><em>New York City, New York</em></span>
+						<span><em><i class="fas fa-map-pin" style="color: #cc3534; margin-right: 0.5rem;"></i>New York City, New York</em></span>
 					</div>
 					<!-- Personal Links for Icon -->
 					<div class="Links">
@@ -122,7 +120,7 @@
 					<div class="ProfileText">
 						<h4>Caryn Moy</h4>
 						<span><em>she/her/hers</em></span>
-						<br><span><em>Chicago, Illinois</em></span>
+						<br><span><em><i class="fas fa-map-pin" style="color: #cc3534; margin-right: 0.5rem;"></i>Chicago, Illinois</em></span>
 					</div>
 					<!-- Personal Links for Icon -->
 					<div class="Links">
@@ -147,7 +145,7 @@
 			<!-- Bio Column -->
 			<div class={`BioColumn-${style}`}>
 				<span>
-					Caryn is an empathetic software engineer who values quality mentorship and disability advocacy. When this Chicago-native is not coding or rock-climbing, she is creating social media content, producing podcast episodes, and organizing a scholarship and mutual aid grant for <a href="https://www.slpsofcolor.org/" target="_blank">Speech-Language Pathologists (SLPs) of Color</a> – a grassroots non-profit organization. She is dedicated to breaking down barriers for minoritized individuals in speech pathology, and now in tech! 
+					Caryn is an empathetic software engineer who values quality mentorship and disability advocacy. When this Chicago-native is not coding or bouldering, she is creating social media content, producing podcast episodes, and organizing a scholarship and mutual aid grant for <a href="https://www.slpsofcolor.org/" target="_blank">Speech-Language Pathologists (SLPs) of Color</a> – a grassroots, 501c(3) non-profit organization. She is dedicated to breaking down barriers for minoritized individuals in speech pathology, and now in tech! 
 				</span>
 			</div>
 		</div>
@@ -164,7 +162,7 @@
 				<div class="ProfileDetails">
 					<div class="ProfileText">
 						<h4>Mimi Kwayo</h4>
-						<span><em>Houston, Texas</em></span>
+						<span><em><i class="fas fa-map-pin" style="color: #cc3534; margin-right: 0.5rem;"></i>Houston, Texas</em></span>
 					</div>
 					<!-- Personal Links for Icon -->
 					<div class="Links">
@@ -206,7 +204,8 @@
 				<div class="ProfileDetails">
 					<div class="ProfileText">
 						<h4>Tommy Ngo</h4>
-						<span><em>Dallas, Texas</em></span>
+						<span><em>he/him/his</em></span>
+						<br><span><em><i class="fas fa-map-pin" style="color: #cc3534; margin-right: 0.5rem;"></i>Dallas, Texas</em></span>
 					</div>
 					<!-- Personal Links for Icon -->
 					<div class="Links">
@@ -231,7 +230,7 @@
 			<!-- Bio Column -->
 			<div class={`BioColumn-${style}`}>
 				<span>
-					tommy bio
+					Tommy is a Software Engineer based out of Dallas, TX with a passion in system optimization and big data. In his free time, he enjoys mountain biking, bouldering, and experimenting with food recipes.
 				</span>
 			</div>
 		</div>
@@ -280,7 +279,7 @@
 	}
 
 	.HeaderTitle {
-		color: #e6e6e6;
+		color: white;
 		font-family: 'IBM Plex Sans', sans-serif;
 		display: flex;
 		justify-content: center;
@@ -302,6 +301,14 @@
 		min-height: 10rem;
 		margin: 1rem 1rem 1rem 1rem;
 		background-color: rgb(207, 207, 207);
+    transition:  box-shadow 1s ease-in-out;
+		transition: background-color 0.3s ease-in-out;
+	}
+
+	.Card-desktop:hover {
+    box-shadow: 0 0 5px 5px whitesmoke; 
+    background-color: whitesmoke;
+		/* transition-delay:0.5s; */
 	}
 
 	.Card-mobile {
@@ -320,13 +327,17 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-    margin: 1rem 0 1rem 0;
+    padding: 1rem 1rem 1rem 1rem;
+    background-color: #e6e6e6;
 	}
 
   .ProfileColumn-mobile {
 		display: flex;
 		flex-direction: column;
-    margin: 1rem 0 1rem 0;
+    padding: 1rem 1rem 1rem 1rem;
+    margin: 2rem 0 2rem 0;
+    border-radius: 10px;
+    background-color: #e6e6e6;
 	}
 
 	.ProfileDetails {
@@ -354,7 +365,8 @@
 	.BioColumn-desktop {
 		display: flex;
 		flex-direction: row;
-		margin: 2rem 1rem 2rem 1rem;
+    padding-left: 1rem;
+		margin: 2rem 1rem 2em 1rem;
     text-align: justify;
 		text-justify: inter-word;
 		font-family: 'IBM Plex Sans', sans-serif;
@@ -364,7 +376,7 @@
 
 	.BioColumn-mobile {
     display: flex;
-    margin: 0 1rem 1rem 1rem; 
+    margin: 0 1rem 2rem 1rem; 
 		font-family: 'IBM Plex Sans', sans-serif;
     font-weight: lighter;
     line-height: 1.3rem;
