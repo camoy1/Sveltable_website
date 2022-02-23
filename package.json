@@ -31,6 +31,6 @@
   },
   "type": "module",
   "dependencies": {
-    "sveltable": "^0.0.2"
+    "sveltable": "^0.0.4"
   }
 }
