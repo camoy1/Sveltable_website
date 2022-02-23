@@ -16,15 +16,15 @@
 	import Features from '../lib/Features.svelte';
 	let clientWidth;
 	const getDataSet = async () => {
-  const res = await fetch ("/api");//fetches the exported data from index.js. We are not sending a request body
-  const data = await res.json();//parses with json and assigns to data
-  if (res.ok){//if the response body is populated it will return it as props
-    return {
-    props: data
-    }
-  } else {
-    throw new Error(data);
-    }
+		const res = await fetch ("/api");//fetches the exported data from index.js. We are not sending a request body
+		const data = await res.json();//parses with json and assigns to data
+		if (res.ok){//if the response body is populated it will return it as props
+			return {
+			props: data
+			}
+		} else {
+			throw new Error(data);
+			}
     }
   let promise = getDataSet();
 </script>
