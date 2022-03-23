@@ -7,38 +7,34 @@
 	let y = 0; // 'y' represents the user's y-axis scroll
 	$: theme = y > 0 ? 'light' : 'dark'; // 'theme' represents light or dark background of header
 	$: burgerTheme = y > 0 ? '#002940' : 'white';
-	
+
 	let open = false; // opening Hamburger component
 
 	// function to trigger scrolling to different section/container
 	const scrollTo = (containerName) => {
 		document.querySelector(containerName).scrollIntoView({
-			behavior: 'smooth',
+			behavior: 'smooth'
 		});
 	};
 </script>
 
 <svelte:window bind:scrollY={y} />
 
-
-
 <!-- Dictates dark/light theme for Mobile header row-->
 <div class={`mobile-header-row-${theme}`}>
-
 	<!-- Mobile header row container holding the full navigation bar -->
 	<div class="mobile-header-row">
-
 		<!-- Hamburger menu icon -->
-		<Hamburger  bind:open --color={`${burgerTheme}`} />
+		<Hamburger bind:open --color={`${burgerTheme}`} />
 		<!-- <div>NEW</div> -->
-		
+
 		<!-- SvelTable logo icon -->
 		<div class="menu-logo">
 			<img id="logo-img" src={mainLogo} alt="svelte table logo" />
 		</div>
 	</div>
 	<!-- MobileMenu opening -->
-	<MobileMenu bind:open theme={theme}/>
+	<MobileMenu bind:open {theme} />
 </div>
 
 <style>

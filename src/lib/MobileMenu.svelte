@@ -1,10 +1,10 @@
 <script>
 	import { fly } from 'svelte/transition';
 	export let open = false;
-	export let theme=undefined
+	export let theme = undefined;
 
 	const scrollTo = (containerName) => {
-		open=!open
+		open = !open;
 		document.querySelector(containerName).scrollIntoView({
 			behavior: 'smooth'
 		});
@@ -12,10 +12,28 @@
 </script>
 
 {#if open}
-	<div class={`button mobile-text-${theme}`} transition:fly={{ y: -15, delay: 30 }} on:click={() => scrollTo('.InstallationContainer')}>installation</div>
-	<div class={`button mobile-text-${theme}`} transition:fly={{ y: -15, delay: 30 *2}} on:click={() => scrollTo('.FeatureContainer')}>features</div>
-	<div class={`button mobile-text-${theme}`} transition:fly={{ y: -15, delay: 30 *3}} on:click={() => scrollTo('.TeamContainer')}>team</div>
-	<div class="mobile-icons" transition:fly={{ y: -15, delay: 30 *4}}>
+	<div
+		class={`button mobile-text-${theme}`}
+		transition:fly={{ y: -15, delay: 30 }}
+		on:click={() => scrollTo('.InstallationContainer')}
+	>
+		installation
+	</div>
+	<div
+		class={`button mobile-text-${theme}`}
+		transition:fly={{ y: -15, delay: 30 * 2 }}
+		on:click={() => scrollTo('.FeatureContainer')}
+	>
+		features
+	</div>
+	<div
+		class={`button mobile-text-${theme}`}
+		transition:fly={{ y: -15, delay: 30 * 3 }}
+		on:click={() => scrollTo('.TeamContainer')}
+	>
+		team
+	</div>
+	<div class="mobile-icons" transition:fly={{ y: -15, delay: 30 * 4 }}>
 		<a class="button npm-link" href="https://www.npmjs.com/package/sveltable" target="_blank">
 			<div class={`npm-${theme}`}>
 				<i class="fab fa-npm fa-2x" />
@@ -26,7 +44,11 @@
 				<i class="fab fa-github fa-2x" />
 			</div>
 		</a>
-		<a class="button linkedin-link" href="https://www.linkedin.com/company/sveltable-open-source-product" target="_blank">
+		<a
+			class="button linkedin-link"
+			href="https://www.linkedin.com/company/sveltable-open-source-product"
+			target="_blank"
+		>
 			<div class={`linkedin-${theme}`}>
 				<i class={`fab fa-linkedin fa-2x`} />
 			</div>
@@ -41,7 +63,7 @@
 	.button {
 		cursor: pointer;
 	}
-	
+
 	div {
 		align-items: right;
 		font-size: 1rem;
@@ -74,7 +96,7 @@
 	.npm-dark {
 		color: white; /* white when header is dark*/
 	}
-	
+
 	.git-light {
 		color: #333; /* dark when header is light*/
 	}
